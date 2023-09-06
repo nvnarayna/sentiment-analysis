@@ -1,6 +1,7 @@
 <script lang='ts'>
 import stops from "./store";
 import sentiment from "./store2";
+import prev_prompt from "./store3";
 import fetch_sentiment from "./fetch";
 
 let txt:string =""
@@ -38,6 +39,7 @@ let handle_click= async ()=>{
     let data=await fetch_sentiment(txt)
     set_data(data)
     set_sentiment(data.sentiment)
+    $prev_prompt=txt
     txt=""
 }
 }
