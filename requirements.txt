@@ -1,0 +1,4 @@
+nltk
+fastapi[all]
+uvicorn
+jinja2
